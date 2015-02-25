@@ -4,13 +4,13 @@
 
 Template.search.helpers({
     searchResults : function(){
-        var results = Ads.find({},{sort : {date: -1}, limit : 30});
+        var results = Rooms.find({},{sort : {date: -1}, limit : 30});
         return results;
     }
 });
 
 Template.search.events({
-    'click #submitButton': function(e){
+    'click #search-button': function(e){
         e.preventDefault();
         //alert(document.getElementById('inputMessage').value);
         var inputValue = $('#inputMessage').val();
