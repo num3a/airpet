@@ -6,8 +6,7 @@ Meteor.startup(function () {
     function initializeApplication() {
         Kadira.connect('hzKYxH6FyL4g9SM5v', '531de270-f860-4f5f-aeb2-15e785cb0731');
     }
-
-
+    
     function initializeFakeRooms() {
 
         for(var i = 0; i < 50; i++){
@@ -29,7 +28,7 @@ Meteor.startup(function () {
     }
 
     initializeApplication();
-    
+
     if(Rooms.find().count() === 0){
         initializeFakeRooms();
     }
