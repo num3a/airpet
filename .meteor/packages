@@ -12,3 +12,6 @@ mrt:bootstrap-3
 jquery
 iron:router
 digilord:faker
+msavin:mongol
+meteorhacks:kadira
+msavin:sessioninspector
