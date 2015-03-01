@@ -1,3 +1,18 @@
 <template name="rooms">
     <h1>rooms</h1>
+    <div class="row">
+        <div class="col-sm-12">
+            <ul class="list-group">
+
+                {{#each latestRooms}}
+                    <li class="list-group-item">
+                        <span>
+                            {{title}}
+                        </span>
+                    </li>
+                {{/each}}
+
+            </ul>
+        </div>
+    </div>
 </template>
