@@ -1,11 +1,12 @@
-/**
- * Created by emmanuelernest on 01/03/15.
- */
-/**
- * Created by emmanuelernest on 23/02/15.
- */
 Router.route('/rooms',function(){
         this.render('rooms');
     },
     {name: 'rooms'}
+);
+
+/* New rooms route */
+Router.route('/rooms/new',function() {
+        this.render('rooms.new');
+    },
+    {name:'rooms.new'}
 );
