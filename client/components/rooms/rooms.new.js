@@ -6,9 +6,15 @@
 
 
 Template.roomsNew.events({
-    'click #gogo': function () {
-        alert('ahh click');
-        // increment the counter when button is clicked
-        Session.set('counter', Session.get('counter') + 1);
+    'submit form': function (event, template) {
+        event.preventDefault();
+
+        var title = event.target.title.value;
+        var description = event.target.description.value;
+
+        Rooms.insert({title: title, description: description});
+
+        var helperValue = this;
+        alert(inputValue, helperValue);
     }
 });

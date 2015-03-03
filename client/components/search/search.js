@@ -4,7 +4,7 @@
 
 Template.search.helpers({
     searchResults : function(){
-        var results = Rooms.find({},{sort : {date: -1}, limit : 20});
+        var results = Rooms.find({},{sort : {date: 1}, limit : 50});
         return results;
     }
 });
