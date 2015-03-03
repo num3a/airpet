@@ -8,5 +8,5 @@ Router.route('/rooms',function(){
 Router.route('/rooms/new',function() {
         this.render('rooms.new');
     },
-    {name:'rooms.new'}
+    {name:'roomsNew'}
 );
