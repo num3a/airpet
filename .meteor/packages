@@ -18,3 +18,5 @@ msavin:sessioninspector
 
 sanjo:jasmine
 velocity:html-reporter
+cfs:standard-packages
+cfs:filesystem

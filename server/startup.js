@@ -5,6 +5,7 @@ Meteor.startup(function () {
     // code to run on server at startup
     function initializeApplication() {
         Kadira.connect('hzKYxH6FyL4g9SM5v', '531de270-f860-4f5f-aeb2-15e785cb0731');
+
     }
 
     function initializeFakeRooms() {
