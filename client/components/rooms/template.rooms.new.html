@@ -1,0 +1,36 @@
+<template name="roomsNew">
+    <h1>Add a new room</h1>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="Enter room title">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" name="description" placeholder="Enter a description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="capacity">Type: </label>
+            <select name="capacity" id="capacity">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+                <option value="4">Four</option>
+                <option value="5">Five</option>
+                <option value="6">More</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="avatar">Add your avatar</label>
+            <input type="file" name="avatar" class="room-input-file"/>
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" name="city" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="gogo" class="btn btn-default">Submit</button>
+        </div>
+    </form>
+</template>
