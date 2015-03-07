@@ -1,10 +1,11 @@
 /**
  * Created by emmanuelernest on 23/02/15.
  */
+Meteor.subscribe('lastFiftyRooms');
 
 Template.search.helpers({
     searchResults : function(){
-        var results = Rooms.find({},{sort : {date: 1}, limit : 50});
+        var results = Rooms.find({},{sort : {date: 1}, limit : 10});
         return results;
     }
 });
