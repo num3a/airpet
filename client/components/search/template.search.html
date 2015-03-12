@@ -1,14 +1,48 @@
 <template name="search">
     <div class="row">
-        <div class="col-sm-12 col-md-12">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
-                </span>
+        <form action="" role="form" class="horizontal-form">
+        	<legend>Search</legend>
+
+        	<div class="form-group">
+                <div class="row">
+
+                    <label for="">Looking for: </label>
+                    <input type="text" class="form-control" name="city" id="" placeholder="City...">
+                </div>
+        	</div>
+
+
+            <div class="form-group">
+                    <label for="dogSize">Your dog size:</label>
+                    <div class="checkbox-inline">
+                        <label>
+                            <input type="radio" name="dogSize" value="1"> Small
+                        </label>
+                    </div>
+                <div class="checkbox-inline">
+                    <label>
+                        <input type="radio" name="dogSize" value="2"> Medium
+                    </label>
+                </div>
+
+                <div class="checkbox-inline">
+                    <label>
+                        <input type="radio" name="dogSize" value="3" > Large
+                    </label>
+                </div>
+                <div class="checkbox-inline">
+                    <label>
+                        <input type="radio" name="dogSize" value="4"> Giant
+                    </label>
+                </div>
             </div>
-        </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
+
+<!--
     <div class="row">
         <div class="col-sm-12">
             <ul class="list-group">
@@ -24,4 +58,5 @@
             </ul>
         </div>
     </div>
+    -->
 </template>

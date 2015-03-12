@@ -18,7 +18,8 @@ Template.roomsNew.events({
 
         Rooms.insert(
             {
-                title: title, description: description, capacity: capacity,city: city});
+                title: title, description: description, capacity: capacity,city: city
+            });
 
         var helperValue = this;
         Router.go('home');
