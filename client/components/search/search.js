@@ -21,5 +21,8 @@ Template.search.events({
             console.log(inputValue + ' added to messages');
             $('#inputMessage').val('');
         }      
+    },
+    'change #searchForm': function(event){
+        $('#rangeValue').text(event.target.value);
     }
 });
