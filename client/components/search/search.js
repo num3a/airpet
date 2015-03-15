@@ -22,7 +22,7 @@ Template.search.events({
             $('#inputMessage').val('');
         }      
     },
-    'change #searchForm': function(event){
-        $('#rangeValue').text(event.target.value);
+    'change input[type=range]': function(event){
+        $('#priceText').text(event.target.value);
     }
 });
