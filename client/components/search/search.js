@@ -1,7 +1,10 @@
-/**
- * Created by emmanuelernest on 23/02/15.
- */
-Meteor.subscribe('lastFiftyRooms');
+Meteor.subscribe('rooms-by-query');
+
+var SearchRoomsUtils = {
+    searchByText : function(){
+        return Rooms.find({title: inputValue},{sort : {date: 1}});
+    }
+};
 
 Template.search.helpers({
     searchResults : function(){
@@ -11,15 +14,17 @@ Template.search.helpers({
 });
 
 Template.search.events({
-    'click #search-button': function(e){
-        e.preventDefault();
+    'click #searchSubmit': function(event){
+        event.preventDefault();
         //alert(document.getElementById('inputMessage').value);
-        var inputValue = $('#inputMessage').val();
-         
+        var inputValue = $('#searchInput').val();
+
+        function searchByText(text) {
+        }
+
         if(inputValue != null && inputValue.length > 0){
-            Messages.insert({ text: inputValue, date: new Date()});
-            console.log(inputValue + ' added to messages');
-            $('#inputMessage').val('');
+
+            var results = SearchRoomsUtils.searchByText(inputValue);
         }      
     },
     'change input[type=range]': function(event){

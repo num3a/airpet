@@ -1,51 +1,50 @@
 <template name="search">
     <div class="row">
-        <form action="" id="searchForm" role="form" class="horizontal-form">
-        	<legend>Search</legend>
 
-        	<div class="form-group">
-                <div class="input-inline">
-                    <label for="city">Looking for: </label>
-                    <input type="text" class="form-control" name="city" id="" placeholder="City...">
+        <div class="col-md-4">
+            <form id="searchForm" role="form" class="horizontal-form">
+                <legend>Search</legend>
+
+                <div class="form-group">
+                    <div class="input-inline">
+                        <label for="city">Looking for: </label>
+                        <input type="text" class="form-control" name="city" id="searchInput" placeholder="City...">
+                    </div>
                 </div>
-        	</div>
-            <div class="form-group">
+
+                <div class="form-group">
                     <label for="dogSize">Your dog size:</label>
                     <div class="checkbox-inline">
                         <label>
                             <input type="radio" name="dogSize" value="1"> Small
                         </label>
                     </div>
-                <div class="checkbox-inline">
-                    <label>
-                        <input type="radio" name="dogSize" value="2"> Medium
-                    </label>
-                </div>
+                    <div class="checkbox-inline">
+                        <label>
+                            <input type="radio" name="dogSize" value="2"> Medium
+                        </label>
+                    </div>
 
-                <div class="checkbox-inline">
-                    <label>
-                        <input type="radio" name="dogSize" value="3" > Large
-                    </label>
+                    <div class="checkbox-inline">
+                        <label>
+                            <input type="radio" name="dogSize" value="3" > Large
+                        </label>
+                    </div>
+                    <div class="checkbox-inline">
+                        <label>
+                            <input type="radio" name="dogSize" value="4"> Giant
+                        </label>
+                    </div>
                 </div>
-                <div class="checkbox-inline">
-                    <label>
-                        <input type="radio" name="dogSize" value="4"> Giant
-                    </label>
+                <div class="form-group">
+                    <label for="price">Price: <span id="priceText">50</span></label>
+                    <input type="range" name="price" min="0" max="100" step="10" />
                 </div>
-            </div>
-            <div class="form-group">
-                <label for="price">Price: <span id="priceText">50</span></label>
-                <input type="range" name="price" min="0" max="100" step="10" />
-            </div>
-            <button type="submit" class="btn btn-primary">Search</button>
-        </form>
-    </div>
-
-<!--
-    <div class="row">
-        <div class="col-sm-12">
+                <button type="submit" class="btn btn-primary" id="searchSubmit">Search</button>
+            </form>
+        </div>
+        <div class="col-md-8">
             <ul class="list-group">
-
                 {{#each searchResults}}
                     <li class="list-group-item">
                         <span>
@@ -53,9 +52,8 @@
                         </span>
                     </li>
                 {{/each}}
-
             </ul>
         </div>
+
     </div>
-    -->
 </template>
